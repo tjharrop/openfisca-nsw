@@ -1,37 +1,32 @@
+
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
+
 
 from setuptools import setup, find_packages
 
+
 setup(
-    name = "OpenFisca-nsw",
-    version = "0.8.0",
-    author = "OpenFisca Team",
-    author_email = "contact@openfisca.org",
-    classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "License :: OSI Approved :: GNU Affero General Public License v3",
-        "Operating System :: POSIX",
-        "Programming Language :: Python",
-        "Topic :: Scientific/Engineering :: Information Analysis",
+    name='OpenFisca-nsw',
+    version='12.0.0',
+    author='Foster Digital',
+    author_email='tj@foster.digital',
+    description=u'OpenFisca tax and benefit system for NSW',
+    keywords='benefit microsimulation social tax',
+    license='http://www.fsf.org/licensing/licenses/agpl-3.0.html',
+    url='https://github.com/tjharrop/openfisca-nsw',
+    include_package_data=True,  # Will read MANIFEST.in
+    install_requires=[
+        'git+https://github.com/tjharrop/openfisca-core.git#egg=openfisca-core',
         ],
-    description = "OpenFisca tax and benefit system for nsw",
-    keywords = "benefit microsimulation social tax",
-    license ="http://www.fsf.org/licensing/licenses/agpl-3.0.html",
-    url = "https://github.com/openfisca/country-template",
-    include_package_data = True,  # Will read MANIFEST.in
-    data_files = [
-        ("share/openfisca/openfisca-nsw", ["CHANGELOG.md", "LICENSE", "README.md"]),
-        ],
-    install_requires = [
-        "git+https://github.com/tjharrop/openfisca-core.git#egg=openfisca-core",
-        ],
-    extras_require = {
-        "dev": [
-            "autopep8 == 1.4.0",
-            "flake8 >= 3.5.0, < 3.6.0",
-            "flake8-print",
-            "pycodestyle >= 2.3.0, < 2.4.0",  # To avoid incompatibility with flake
+    extras_require={
+        'test': [
+            'flake8 >=3.4.0,<3.7.0',
+            'flake8-print',
+            'nose',
+            'yamllint'
             ]
         },
     packages=find_packages(),
+    test_suite='nose.collector',
     )
