@@ -1,4 +1,4 @@
--e git://github.com/DTS-STN/openfisca-core.git#egg=openfisca-core
+-e git://github.com/tjharrop/openfisca-core.git#egg=openfisca-core
 Biryani[datetimeconv] >= 0.10.8
 dpath == 1.5.0
 enum34 >= 1.1.6
