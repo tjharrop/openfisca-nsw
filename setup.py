@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "OpenFisca-nsw",
-    version = "0.6.0",
+    version = "0.8.0",
     author = "OpenFisca Team",
     author_email = "contact@openfisca.org",
     classifiers=[
@@ -23,7 +23,7 @@ setup(
         ("share/openfisca/openfisca-nsw", ["CHANGELOG.md", "LICENSE", "README.md"]),
         ],
     install_requires = [
-        "OpenFisca-Core[web-api] >= 25.0, < 26.0",
+        "OpenFisca-Core[web-api] >= 29.0",
         ],
     extras_require = {
         "dev": [
