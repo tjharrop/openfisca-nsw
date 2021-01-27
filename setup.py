@@ -23,7 +23,7 @@ setup(
         ("share/openfisca/openfisca-nsw", ["CHANGELOG.md", "LICENSE", "README.md"]),
         ],
     install_requires = [
-        "OpenFisca-Core[web-api] >= 29.0",
+        "git+https://github.com/tjharrop/openfisca-core.git#egg=openfisca-core",
         ],
     extras_require = {
         "dev": [
